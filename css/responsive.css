@@ -1274,41 +1274,6 @@
   }
 }
 
-/* Dark mode support */
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: #1a1a1a;
-    color: #e5e5e5;
-  }
-
-  .game-card,
-  .review-card,
-  .feature,
-  .stat {
-    background-color: #2d2d2d;
-    color: #e5e5e5;
-  }
-
-  .game-title,
-  .reviewer-info h4 {
-    color: #e5e5e5;
-  }
-
-  .form-group input,
-  .form-group select,
-  .form-group textarea {
-    background-color: #2d2d2d;
-    color: #e5e5e5;
-    border-color: #4a4a4a;
-  }
-
-  .btn-secondary {
-    background-color: #4a4a4a;
-    color: #e5e5e5;
-    border-color: #666;
-  }
-}
-
 @media (min-width: 768px) and (max-width: 1279px) {
   .games-grid {
     grid-template-columns: repeat(2, 1fr);
