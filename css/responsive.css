@@ -50,22 +50,55 @@
 
   /* Hero Section Mobile */
   .hero {
+    padding: 3rem 0;
+    min-height: auto;
+    text-align: center;
+  }
+
+  .hero .container {
     grid-template-columns: 1fr;
-    gap: 2rem;
-    padding: 2rem 0;
+    gap: 3rem;
+    padding: 0 15px;
+  }
+
+  .hero-content {
+    max-width: 100%;
     text-align: center;
   }
 
   .hero-content h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
+    line-height: 1.2;
   }
 
   .hero-content p {
-    font-size: 1rem;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
   }
 
   .hero-buttons {
     justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .hero-image {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+  }
+
+  .hero-image img {
+    max-width: 100%;
+    border-radius: 12px;
   }
 
   /* Games Grid Mobile */
@@ -80,7 +113,7 @@
   }
 
   .game-image img {
-    height: 180px;
+    height: 200px;
   }
 
   .game-content {
@@ -89,8 +122,7 @@
   }
 
   .add-to-cart-btn {
-    margin-top: auto;
-    padding: 8px;
+    padding: 10px 20px;
   }
 
   /* PC Games Section Mobile */
@@ -103,6 +135,24 @@
     margin-bottom: 2rem;
   }
 
+  .pc-games .games-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .pc-games .game-card .game-image img {
+    height: 200px;
+  }
+
+  .pc-games .game-card .game-content {
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .pc-games .game-card .add-to-cart-btn {
+    padding: 10px 20px;
+  }
+
   /* Xbox Games Section Mobile */
   .xbox-games {
     padding: 2rem 0;
@@ -111,6 +161,24 @@
   .xbox-games h2 {
     font-size: 2rem;
     margin-bottom: 2rem;
+  }
+
+  .xbox-games .games-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .xbox-games .game-card .game-image img {
+    height: 200px;
+  }
+
+  .xbox-games .game-card .game-content {
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .xbox-games .game-card .add-to-cart-btn {
+    padding: 10px 20px;
   }
 
   /* Gaming Community Section Mobile */
@@ -203,16 +271,51 @@
 
   .filters {
     order: 2;
+    margin-top: 2rem;
+    position: static;
   }
 
   .games-section {
     order: 1;
   }
 
+  #catalog-games-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  #catalog-games-grid .game-card .game-image img {
+    height: 200px;
+  }
+
+  #catalog-games-grid .game-card .game-content {
+    padding: 10px;
+    gap: 10px;
+  }
+
+  #catalog-games-grid .game-card .add-to-cart-btn {
+    padding: 10px 20px;
+  }
+
   .games-header {
     flex-direction: column;
     gap: 1rem;
-    align-items: stretch;
+    align-items: flex-start;
+  }
+
+  .pagination {
+    flex-wrap: wrap;
+    gap: 0.25rem;
+  }
+
+  .pagination-btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .pagination-info {
+    margin: 0 0.5rem;
+    font-size: 0.9rem;
   }
 
   /* Cart Mobile */
@@ -246,7 +349,11 @@
   /* Game Details Mobile */
   .game-content {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 2rem;
+  }
+
+  .game-image img {
+    height: auto;
   }
 
   .game-details-grid {
@@ -268,6 +375,25 @@
   .faq-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+  }
+
+  /* Recommendations Mobile */
+  .recommendations .games-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .recommendations .game-card .game-image img {
+    height: 200px;
+  }
+
+  .recommendations .game-card .game-content {
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .recommendations .game-card .add-to-cart-btn {
+    padding: 10px 20px;
   }
 }
 
@@ -292,13 +418,38 @@
 
   /* Hero Section Tablet */
   .hero {
+    padding: 4rem 0;
+    min-height: 70vh;
+  }
+
+  .hero .container {
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
-    padding: 3rem 0;
+    padding: 0 30px;
+  }
+
+  .hero-content {
+    text-align: left;
   }
 
   .hero-content h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
+    line-height: 1.1;
+  }
+
+  .hero-content p {
+    font-size: 1.15rem;
+    margin-bottom: 2rem;
+  }
+
+  .hero-image {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .hero-image img {
+    max-width: 100%;
   }
 
   /* Games Grid Tablet */
@@ -313,10 +464,19 @@
     margin-bottom: 2.5rem;
   }
 
+  .pc-games .games-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+
   /* Xbox Games Section Tablet */
   .xbox-games h2 {
     font-size: 2.25rem;
     margin-bottom: 2.5rem;
+  }
+
+  .xbox-games .games-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
   }
 
   /* Gaming Community Section Tablet */
@@ -378,6 +538,19 @@
     gap: 2rem;
   }
 
+  #catalog-games-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .filters {
+    padding: 1.5rem;
+  }
+
+  .pagination-btn {
+    padding: 0.5rem 0.9rem;
+  }
+
   /* Cart Tablet */
   .cart-content {
     grid-template-columns: 1fr 300px;
@@ -396,9 +569,13 @@
     gap: 3rem;
   }
 
+  .game-image img {
+    height: auto;
+  }
+
   .game-details-grid {
     grid-template-columns: 1fr 1fr;
-    gap: 1rem;
+    gap: 1.5rem;
   }
 
   /* Contact Tablet */
@@ -415,6 +592,12 @@
   .faq-grid {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
+  }
+
+  /* Recommendations Tablet */
+  .recommendations .games-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
   }
 }
 
@@ -440,16 +623,33 @@
 
   /* Hero Section Desktop */
   .hero {
-    gap: 4rem;
-    padding: 4rem 0;
+    padding: 6rem 0;
+    min-height: 80vh;
+  }
+
+  .hero .container {
+    gap: 5rem;
+    padding: 0 40px;
   }
 
   .hero-content h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
+    line-height: 1.1;
   }
 
   .hero-content p {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .hero-image {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .hero-image img {
+    max-width: 100%;
   }
 
   /* Games Grid Desktop */
@@ -464,7 +664,7 @@
   }
 
   .game-image img {
-    height: 220px;
+    height: 200px;
   }
 
   .game-content {
@@ -495,8 +695,7 @@
   }
 
   .add-to-cart-btn {
-    margin-top: auto;
-    padding: 12px;
+    padding: 12px 24px;
   }
 
   /* Reviews Desktop */
@@ -537,6 +736,51 @@
     gap: 3rem;
   }
 
+  #catalog-games-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  #catalog-games-grid .game-card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #catalog-games-grid .game-card .game-image img {
+    height: auto;
+  }
+
+  #catalog-games-grid .game-card .game-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 12px;
+  }
+
+  #catalog-games-grid .game-card .game-title {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+
+  #catalog-games-grid .game-card .game-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    margin: 0;
+  }
+
+  #catalog-games-grid .game-card .game-platforms {
+    gap: 6px;
+  }
+
+  #catalog-games-grid .game-card .game-price {
+    margin: 0;
+  }
+
+  #catalog-games-grid .game-card .add-to-cart-btn {
+    padding: 12px 24px;
+  }
+
   /* Cart Desktop */
   .cart-content {
     grid-template-columns: 1fr 350px;
@@ -552,12 +796,16 @@
   /* Game Details Desktop */
   .game-content {
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    gap: 4rem;
+  }
+
+  .game-image img {
+    height: auto;
   }
 
   .game-details-grid {
     grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
+    gap: 2rem;
   }
 
   /* Contact Desktop */
@@ -574,6 +822,144 @@
   .faq-grid {
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 2rem;
+  }
+
+  /* Recommendations Desktop */
+  .recommendations .games-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .recommendations .game-card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .recommendations .game-card .game-image img {
+    height: auto;
+  }
+
+  .recommendations .game-card .game-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 12px;
+  }
+
+  .recommendations .game-card .game-title {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+
+  .recommendations .game-card .game-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    margin: 0;
+  }
+
+  .recommendations .game-card .game-platforms {
+    gap: 6px;
+  }
+
+  .recommendations .game-card .game-price {
+    margin: 0;
+  }
+
+  .recommendations .game-card .add-to-cart-btn {
+    padding: 12px 24px;
+  }
+
+  /* PC Games Section Desktop */
+  .pc-games .games-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .pc-games .game-card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .pc-games .game-card .game-image img {
+    height: 200px;
+  }
+
+  .pc-games .game-card .game-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 12px;
+  }
+
+  .pc-games .game-card .game-title {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+
+  .pc-games .game-card .game-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    margin: 0;
+  }
+
+  .pc-games .game-card .game-platforms {
+    gap: 6px;
+  }
+
+  .pc-games .game-card .game-price {
+    margin: 0;
+  }
+
+  .pc-games .game-card .add-to-cart-btn {
+    padding: 12px 24px;
+  }
+
+  /* Xbox Games Section Desktop */
+  .xbox-games .games-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .xbox-games .game-card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .xbox-games .game-card .game-image img {
+    height: 200px;
+  }
+
+  .xbox-games .game-card .game-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 12px;
+  }
+
+  .xbox-games .game-card .game-title {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+
+  .xbox-games .game-card .game-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    margin: 0;
+  }
+
+  .xbox-games .game-card .game-platforms {
+    gap: 6px;
+  }
+
+  .xbox-games .game-card .game-price {
+    margin: 0;
+  }
+
+  .xbox-games .game-card .add-to-cart-btn {
+    padding: 12px 24px;
   }
 }
 
@@ -601,6 +987,30 @@
 
   .notification.show {
     transform: translateY(0);
+  }
+
+  /* Hero Section Small Mobile */
+  .hero {
+    padding: 2rem 0;
+  }
+
+  .hero .container {
+    gap: 2rem;
+    padding: 0 10px;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+    line-height: 1.3;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-image {
+    max-width: 300px;
   }
 }
 
@@ -694,7 +1104,7 @@
     flex-direction: column;
   }
 
-  .game-image img {
+  .game-card .game-image img {
     height: 200px;
   }
 
@@ -726,7 +1136,83 @@
   }
 
   .add-to-cart-btn {
-    margin-top: auto;
     padding: 10px;
   }
+
+  /* Game Details Page - сохраняем auto высоту */
+  .game-details .game-image img {
+    height: auto;
+  }
+}
+
+/* Универсальная высота и min-height для карточек игр на мобильных */
+.pc-games .game-card,
+.xbox-games .game-card,
+#catalog-games-grid .game-card,
+.recommendations .game-card {
+  min-height: 180px;
+}
+.pc-games .game-image,
+.xbox-games .game-image,
+#catalog-games-grid .game-image,
+.recommendations .game-image {
+  height: 180px;
+  width: 100%;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .pc-games .game-card,
+  .xbox-games .game-card,
+  #catalog-games-grid .game-card,
+  .recommendations .game-card {
+    min-height: 200px;
+  }
+  .pc-games .game-image,
+  .xbox-games .game-image,
+  #catalog-games-grid .game-image,
+  .recommendations .game-image {
+    height: 200px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .pc-games .game-card,
+  .xbox-games .game-card,
+  #catalog-games-grid .game-card,
+  .recommendations .game-card {
+    min-height: 200px;
+  }
+  .pc-games .game-image,
+  .xbox-games .game-image,
+  #catalog-games-grid .game-image,
+  .recommendations .game-image {
+    height: 200px;
+  }
+}
+
+/* Исправление ширины изображений в карточках на мобильных */
+.pc-games .game-image,
+.xbox-games .game-image,
+#catalog-games-grid .game-image,
+.recommendations .game-image {
+  width: 100%;
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+}
+.pc-games .game-card,
+.xbox-games .game-card,
+#catalog-games-grid .game-card,
+.recommendations .game-card {
+  padding-left: 0;
+  padding-right: 0;
+}
+.pc-games .game-content,
+.xbox-games .game-content,
+#catalog-games-grid .game-content,
+.recommendations .game-content {
+  /* Удалены padding-left: 0; и padding-right: 0; чтобы вернуть стандартные паддинги */
 }

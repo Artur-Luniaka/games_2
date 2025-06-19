@@ -128,22 +128,6 @@ class GameDetailsPage {
     if (addToCartBtn) {
       addToCartBtn.dataset.gameId = this.game.id;
     }
-
-    // Render gallery
-    this.renderGallery();
-  }
-
-  renderGallery() {
-    const gameGallery = document.getElementById("game-gallery");
-    if (!gameGallery || !this.game.gallery) return;
-
-    gameGallery.innerHTML = this.game.gallery
-      .map(
-        (image) => `
-            <img src="${image}" alt="${this.game.title}" onclick="this.parentElement.parentElement.querySelector('.game-image img').src = '${image}'">
-        `
-      )
-      .join("");
   }
 
   renderReviews() {

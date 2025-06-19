@@ -9,6 +9,8 @@ class CatalogPage {
       priceRange: { min: 0, max: 100 },
     };
     this.sortBy = "name";
+    this.currentPage = 1;
+    this.gamesPerPage = 6;
     this.init();
   }
 
@@ -16,6 +18,7 @@ class CatalogPage {
     await this.loadGames();
     this.setupFilters();
     this.setupSorting();
+    this.setupPagination();
     this.renderGames();
     this.updateResultsCount();
   }
@@ -133,10 +136,82 @@ class CatalogPage {
     if (sortSelect) {
       sortSelect.addEventListener("change", (e) => {
         this.sortBy = e.target.value;
+        this.currentPage = 1;
         this.applySorting();
         this.renderGames();
+        this.updatePagination();
       });
     }
+  }
+
+  setupPagination() {
+    const prevBtn = document.getElementById("prev-page");
+    const nextBtn = document.getElementById("next-page");
+    const paginationInfo = document.getElementById("pagination-info");
+
+    if (prevBtn) {
+      prevBtn.addEventListener("click", () => {
+        if (this.currentPage > 1) {
+          this.currentPage--;
+          this.renderGames();
+          this.updatePagination();
+          this.scrollToTop();
+        }
+      });
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener("click", () => {
+        const totalPages = Math.ceil(
+          this.filteredGames.length / this.gamesPerPage
+        );
+        if (this.currentPage < totalPages) {
+          this.currentPage++;
+          this.renderGames();
+          this.updatePagination();
+          this.scrollToTop();
+        }
+      });
+    }
+
+    this.updatePagination();
+  }
+
+  updatePagination() {
+    const pagination = document.getElementById("pagination");
+    const prevBtn = document.getElementById("prev-page");
+    const nextBtn = document.getElementById("next-page");
+    const paginationInfo = document.getElementById("pagination-info");
+
+    if (!pagination || !prevBtn || !nextBtn || !paginationInfo) return;
+
+    const totalPages = Math.ceil(this.filteredGames.length / this.gamesPerPage);
+    const startIndex = (this.currentPage - 1) * this.gamesPerPage + 1;
+    const endIndex = Math.min(
+      this.currentPage * this.gamesPerPage,
+      this.filteredGames.length
+    );
+
+    // Показываем пагинацию только если есть больше одной страницы
+    if (totalPages > 1) {
+      pagination.style.display = "flex";
+    } else {
+      pagination.style.display = "none";
+    }
+
+    // Обновляем информацию о страницах
+    paginationInfo.textContent = `Page ${this.currentPage} of ${totalPages}`;
+
+    // Обновляем состояние кнопок
+    prevBtn.disabled = this.currentPage === 1;
+    nextBtn.disabled = this.currentPage === totalPages;
+  }
+
+  scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   }
 
   updatePlatformFilters() {
@@ -222,8 +297,10 @@ class CatalogPage {
     });
 
     this.applySorting();
+    this.currentPage = 1;
     this.renderGames();
     this.updateResultsCount();
+    this.updatePagination();
   }
 
   applySorting() {
@@ -252,13 +329,18 @@ class CatalogPage {
     if (this.filteredGames.length === 0) {
       gamesGrid.style.display = "none";
       if (noResults) noResults.style.display = "block";
+      this.updatePagination();
       return;
     }
 
     gamesGrid.style.display = "grid";
     if (noResults) noResults.style.display = "none";
 
-    gamesGrid.innerHTML = this.filteredGames
+    const startIndex = (this.currentPage - 1) * this.gamesPerPage;
+    const endIndex = startIndex + this.gamesPerPage;
+    const currentGames = this.filteredGames.slice(startIndex, endIndex);
+
+    gamesGrid.innerHTML = currentGames
       .map((game) => {
         const stars = this.createStarRating(game.rating);
         const platforms = game.platforms
@@ -308,6 +390,8 @@ class CatalogPage {
             `;
       })
       .join("");
+
+    this.updatePagination();
   }
 
   updateResultsCount() {
