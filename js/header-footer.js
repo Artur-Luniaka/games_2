@@ -18,13 +18,13 @@ class HeaderFooter {
             <header>
                 <div class="container">
                     <div class="header-content">
-                        <a href="index.html" class="logo">MobilePlayStrike</a>
+                        <a href="./" class="logo">MobilePlayStrike 🎮</a>
                         
                         <nav>
                             <ul class="nav-menu" id="nav-menu">
-                                <li><a href="index.html">Store</a></li>
-                                <li><a href="index.html#pc-games">PC Games</a></li>
-                                <li><a href="index.html#xbox-games">Xbox Games</a></li>
+                                <li><a href="./">Store</a></li>
+              <li><a href="./#pc-games">PC Games</a></li>
+              <li><a href="./#xbox-games">Xbox Games</a></li>
                                 <li><a href="catalog.html">Catalog</a></li>
                                 <li><a href="contact.html">Contact</a></li>
                             </ul>
@@ -57,7 +57,7 @@ class HeaderFooter {
                 <div class="container">
                     <div class="footer-content">
                         <div class="footer-section">
-                            <h3>GameStore</h3>
+                            <h3>MobilePlayStrike 🎮</h3>
                             <p>Your premier destination for digital video games. We offer the best prices and instant delivery for Xbox and PC games.</p>
                         </div>
                         

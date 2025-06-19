@@ -5,8 +5,11 @@ class CartPage {
   }
 
   init() {
-    this.renderCart();
-    this.setupEventListeners();
+    // Ждем инициализации cart
+    setTimeout(() => {
+      this.renderCart();
+      this.setupEventListeners();
+    }, 100);
   }
 
   renderCart() {

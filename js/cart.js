@@ -83,16 +83,48 @@ class Cart {
   }
 
   showNotification(message, type = "success") {
-    const notification = document.getElementById("notification");
-    if (notification) {
-      notification.textContent = message;
-      notification.className = `notification ${type}`;
-      notification.classList.add("show");
+    // Создаем элемент уведомления
+    const notification = document.createElement("div");
+    notification.className = `notification notification-${type}`;
 
-      setTimeout(() => {
-        notification.classList.remove("show");
-      }, 3000);
-    }
+    // Добавляем иконку в зависимости от типа уведомления
+    const icon =
+      type === "success"
+        ? '<svg class="notification-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>'
+        : '<svg class="notification-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>';
+
+    notification.innerHTML = `
+      ${icon}
+      <div class="notification-content">
+        <h3>${type === "success" ? "Success!" : "Error!"}</h3>
+        <p>${message}</p>
+      </div>
+      <button class="notification-close" aria-label="Close notification">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    `;
+
+    // Добавляем уведомление на страницу
+    document.body.appendChild(notification);
+
+    // Добавляем класс для анимации появления
+    setTimeout(() => notification.classList.add("show"), 10);
+
+    // Добавляем обработчик для кнопки закрытия
+    const closeButton = notification.querySelector(".notification-close");
+    closeButton.addEventListener("click", () => {
+      notification.classList.remove("show");
+      setTimeout(() => notification.remove(), 300);
+    });
+
+    // Автоматически скрываем уведомление через 3 секунды
+    setTimeout(() => {
+      notification.classList.remove("show");
+      setTimeout(() => notification.remove(), 300);
+    }, 3000);
   }
 
   setupEventListeners() {
@@ -326,8 +358,8 @@ class Cart {
 let cart;
 document.addEventListener("DOMContentLoaded", () => {
   cart = new Cart();
+  window.cart = cart;
 });
 
 // Export for use in other modules
 window.Cart = Cart;
-window.cart = cart;

@@ -27,13 +27,19 @@ class MainPage {
     }
   }
 
+  getRandomGames(platform, count = 3) {
+    const platformGames = this.games.filter((game) =>
+      game.platforms.includes(platform)
+    );
+    const shuffled = [...platformGames].sort(() => 0.5 - Math.random());
+    return shuffled.slice(0, count);
+  }
+
   renderPCGames() {
     const pcGamesGrid = document.getElementById("pc-games-grid");
     if (!pcGamesGrid) return;
 
-    const pcGames = this.games
-      .filter((game) => game.platforms.includes("PC"))
-      .slice(0, 3);
+    const pcGames = this.getRandomGames("PC", 3);
 
     pcGamesGrid.innerHTML = pcGames
       .map((game) => {
@@ -93,9 +99,7 @@ class MainPage {
     const xboxGamesGrid = document.getElementById("xbox-games-grid");
     if (!xboxGamesGrid) return;
 
-    const xboxGames = this.games
-      .filter((game) => game.platforms.includes("Xbox"))
-      .slice(0, 3);
+    const xboxGames = this.getRandomGames("Xbox", 3);
 
     xboxGamesGrid.innerHTML = xboxGames
       .map((game) => {

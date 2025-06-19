@@ -324,6 +324,12 @@
     gap: 2rem;
   }
 
+  .empty-cart {
+    max-width: 100%;
+    margin: 0;
+    padding: 3rem 1rem;
+  }
+
   .cart-summary {
     order: 1;
   }
@@ -394,6 +400,163 @@
 
   .recommendations .game-card .add-to-cart-btn {
     padding: 10px 20px;
+  }
+
+  /* Cart Mobile Styles */
+  .cart-item {
+    display: flex;
+    flex-direction: column !important;
+    align-items: stretch;
+    padding: 15px;
+    gap: 10px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .cart-item-image {
+    width: 100%;
+    max-width: 180px;
+    margin: 0 auto 10px auto;
+    display: block;
+  }
+
+  .cart-item-info {
+    width: 100%;
+    text-align: center;
+    word-break: break-word;
+  }
+
+  .cart-item-price {
+    width: 100%;
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+  }
+
+  .cart-item-controls {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .quantity-controls {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .remove-btn {
+    width: 100%;
+    max-width: 180px;
+    margin: 0 auto;
+  }
+
+  .cart-summary {
+    margin-top: 20px;
+    padding: 15px;
+  }
+
+  /* Checkout Mobile Styles */
+  .checkout .btn {
+    font-size: 13px;
+  }
+
+  .checkout .btn-large {
+    font-size: 13px;
+  }
+
+  /* Contact Page Mobile Styles */
+  .contact-header h1 {
+    font-size: 2rem;
+  }
+
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .contact-info {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-item {
+    padding: 1rem;
+  }
+
+  .contact-icon {
+    font-size: 1.25rem;
+    padding: 0.75rem;
+  }
+
+  .map-section {
+    margin: 2rem 0;
+  }
+
+  .map-container {
+    height: 300px;
+  }
+
+  .map-container iframe {
+    height: 100%;
+  }
+
+  .faq-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .faq-item {
+    padding: 1.25rem;
+  }
+}
+
+/* Tablet styles (768px - 850px) */
+@media (min-width: 768px) and (max-width: 850px) {
+  .cart-item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-areas:
+      "image info"
+      "image controls";
+    gap: 15px;
+    padding: 15px;
+    align-items: center;
+  }
+
+  .cart-item-image {
+    grid-area: image;
+    width: 120px;
+    max-width: none;
+    margin: 0;
+  }
+
+  .cart-item-info {
+    grid-area: info;
+    text-align: left;
+    padding-right: 10px;
+  }
+
+  .cart-item-controls {
+    grid-area: controls;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .quantity-controls {
+    order: 1;
+    margin-right: 10px;
+  }
+
+  .remove-btn {
+    order: 2;
+    width: auto;
+    margin: 0;
+  }
+
+  .cart-item-price {
+    margin: 5px 0;
   }
 }
 
@@ -557,6 +720,11 @@
     gap: 2rem;
   }
 
+  .empty-cart {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
   /* Checkout Tablet */
   .checkout-content {
     grid-template-columns: 1fr 350px;
@@ -597,6 +765,40 @@
   /* Recommendations Tablet */
   .recommendations .games-grid {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+
+  /* Checkout Tablet Styles */
+  .checkout .btn {
+    font-size: 14px;
+  }
+
+  .checkout .btn-large {
+    font-size: 14px;
+  }
+
+  /* Contact Page Tablet Styles */
+  .contact-content {
+    gap: 2rem;
+  }
+
+  .contact-info {
+    padding: 1.5rem;
+  }
+
+  .contact-form {
+    padding: 1.5rem;
+  }
+
+  .map-container {
+    height: 400px;
+  }
+
+  .map-container iframe {
+    height: 100%;
+  }
+
+  .faq-grid {
     gap: 1.5rem;
   }
 }
@@ -787,6 +989,11 @@
     gap: 3rem;
   }
 
+  .empty-cart {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
   /* Checkout Desktop */
   .checkout-content {
     grid-template-columns: 1fr 400px;
@@ -960,6 +1167,15 @@
 
   .xbox-games .game-card .add-to-cart-btn {
     padding: 12px 24px;
+  }
+
+  /* Checkout Desktop Styles */
+  .checkout .btn {
+    font-size: 16px;
+  }
+
+  .checkout .btn-large {
+    font-size: 16px;
   }
 }
 

@@ -27,30 +27,6 @@ class CheckoutPage {
         this.validateEmail(emailInput);
       });
     }
-
-    // Card number formatting
-    const cardNumberInput = document.getElementById("card-number");
-    if (cardNumberInput) {
-      cardNumberInput.addEventListener("input", (e) => {
-        this.formatCardNumber(e.target);
-      });
-    }
-
-    // Expiry date formatting
-    const expiryInput = document.getElementById("expiry");
-    if (expiryInput) {
-      expiryInput.addEventListener("input", (e) => {
-        this.formatExpiryDate(e.target);
-      });
-    }
-
-    // CVV validation
-    const cvvInput = document.getElementById("cvv");
-    if (cvvInput) {
-      cvvInput.addEventListener("input", (e) => {
-        this.validateCVV(e.target);
-      });
-    }
   }
 
   setupEventListeners() {
@@ -85,25 +61,6 @@ class CheckoutPage {
     }
   }
 
-  formatCardNumber(input) {
-    let value = input.value.replace(/\D/g, "");
-    value = value.replace(/(\d{4})(?=\d)/g, "$1 ");
-    input.value = value.substring(0, 19);
-  }
-
-  formatExpiryDate(input) {
-    let value = input.value.replace(/\D/g, "");
-    if (value.length >= 2) {
-      value = value.substring(0, 2) + "/" + value.substring(2, 4);
-    }
-    input.value = value.substring(0, 5);
-  }
-
-  validateCVV(input) {
-    const value = input.value.replace(/\D/g, "");
-    input.value = value.substring(0, 4);
-  }
-
   validateForm() {
     const form = document.getElementById("checkout-form");
     if (!form) return false;
@@ -133,49 +90,7 @@ class CheckoutPage {
       }
     });
 
-    // Validate card number
-    const cardNumber = document.getElementById("card-number");
-    if (cardNumber && cardNumber.value.replace(/\s/g, "").length < 13) {
-      this.showFieldError(cardNumber, "Please enter a valid card number");
-      isValid = false;
-    }
-
-    // Validate expiry date
-    const expiry = document.getElementById("expiry");
-    if (expiry && !this.validateExpiryDate(expiry.value)) {
-      this.showFieldError(expiry, "Please enter a valid expiry date (MM/YY)");
-      isValid = false;
-    }
-
-    // Validate CVV
-    const cvv = document.getElementById("cvv");
-    if (cvv && cvv.value.length < 3) {
-      this.showFieldError(cvv, "Please enter a valid CVV");
-      isValid = false;
-    }
-
     return isValid;
-  }
-
-  validateExpiryDate(expiry) {
-    if (!expiry || expiry.length !== 5) return false;
-
-    const [month, year] = expiry.split("/");
-    const currentDate = new Date();
-    const currentYear = currentDate.getFullYear() % 100;
-    const currentMonth = currentDate.getMonth() + 1;
-
-    const expMonth = parseInt(month);
-    const expYear = parseInt(year);
-
-    if (expMonth < 1 || expMonth > 12) return false;
-    if (
-      expYear < currentYear ||
-      (expYear === currentYear && expMonth < currentMonth)
-    )
-      return false;
-
-    return true;
   }
 
   showFieldError(field, message) {
@@ -202,82 +117,114 @@ class CheckoutPage {
 
   async handleFormSubmission() {
     if (!this.validateForm()) {
-      if (window.cart) {
-        window.cart.showNotification(
-          "Please fix the errors in the form",
-          "error"
-        );
-      }
       return;
-    }
-
-    if (!window.cart || window.cart.getCartCount() === 0) {
-      if (window.cart) {
-        window.cart.showNotification("Your cart is empty", "error");
-      }
-      return;
-    }
-
-    // Show loading state
-    const placeOrderBtn = document.getElementById("place-order-btn");
-    if (placeOrderBtn) {
-      placeOrderBtn.textContent = "Processing...";
-      placeOrderBtn.disabled = true;
     }
 
     try {
-      // Simulate order processing
+      // Scroll to top
+      window.scrollTo({ top: 0, behavior: "smooth" });
+
+      // Create and show overlay
+      const overlay = document.createElement("div");
+      overlay.className = "overlay";
+      document.body.appendChild(overlay);
+
       await this.processOrder();
-
-      // Clear cart
-      if (window.cart) {
-        window.cart.clearCart();
-      }
-
-      // Show success message
       this.showOrderSuccess();
     } catch (error) {
-      console.error("Order processing error:", error);
-      if (window.cart) {
-        window.cart.showNotification(
-          "Error processing order. Please try again.",
-          "error"
-        );
-      }
-
-      // Reset button
-      if (placeOrderBtn) {
-        placeOrderBtn.textContent = "Place Order";
-        placeOrderBtn.disabled = false;
-      }
+      console.error("Error processing order:", error);
+      this.showNotification(
+        "Error processing your order. Please try again.",
+        "error"
+      );
     }
   }
 
   async processOrder() {
-    // Simulate API call delay
-    return new Promise((resolve) => {
-      setTimeout(() => {
-        resolve();
-      }, 2000);
-    });
+    // Here you would typically send the order to your backend
+    // For now, we'll just simulate a successful order
+    return new Promise((resolve) => setTimeout(resolve, 1000));
   }
 
   showOrderSuccess() {
-    const main = document.querySelector("main");
-    if (main) {
-      main.innerHTML = `
-                <div class="container">
-                    <div style="text-align: center; padding: 4rem 0;">
-                        <div style="font-size: 4rem; margin-bottom: 2rem;">🎉</div>
-                        <h1>Order Placed Successfully!</h1>
-                        <p>Thank you for your purchase. You will receive an email confirmation shortly with your game download links.</p>
-                        <div style="margin-top: 2rem;">
-                            <a href="index.html" class="btn btn-primary">Continue Shopping</a>
-                        </div>
-                    </div>
-                </div>
-            `;
+    // Clear the cart
+    if (window.cart) {
+      window.cart.clearCart();
     }
+
+    // Hide the checkout content
+    const checkoutContent = document.querySelector(".checkout-content");
+    if (checkoutContent) {
+      checkoutContent.style.display = "none";
+    }
+
+    // Show success message
+    const successMessage = document.getElementById("success-message");
+    if (successMessage) {
+      successMessage.style.display = "flex";
+    }
+
+    // Start countdown
+    let countdown = 10;
+    const countdownElement = document.getElementById("countdown");
+
+    const timer = setInterval(() => {
+      countdown--;
+      if (countdownElement) {
+        countdownElement.textContent = countdown;
+      }
+
+      if (countdown <= 0) {
+        clearInterval(timer);
+        window.location.href = "./";
+      }
+    }, 1000);
+  }
+
+  // Функция для показа уведомлений
+  showNotification(message, type = "success") {
+    // Создаем элемент уведомления
+    const notification = document.createElement("div");
+    notification.className = `notification notification-${type}`;
+
+    // Добавляем иконку в зависимости от типа уведомления
+    const icon =
+      type === "success"
+        ? '<svg class="notification-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>'
+        : '<svg class="notification-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>';
+
+    notification.innerHTML = `
+      ${icon}
+      <div class="notification-content">
+        <h3>${type === "success" ? "Success!" : "Error!"}</h3>
+        <p>${message}</p>
+      </div>
+      <button class="notification-close" aria-label="Close notification">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    `;
+
+    // Добавляем уведомление на страницу
+    document.body.appendChild(notification);
+
+    // Добавляем класс для анимации появления
+    setTimeout(() => notification.classList.add("show"), 10);
+
+    // Добавляем обработчик для кнопки закрытия
+    const closeButton = notification.querySelector(".notification-close");
+    closeButton.addEventListener("click", () => {
+      notification.classList.remove("show");
+      setTimeout(() => notification.remove(), 300);
+    });
+
+    // Автоматически скрываем уведомление через 3 секунды
+    setTimeout(() => {
+      notification.classList.remove("show");
+      setTimeout(() => notification.remove(), 300);
+    }, 3000);
   }
 }
 
