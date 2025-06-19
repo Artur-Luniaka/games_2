@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - GameStore</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="header-placeholder"></div>
+
+    <main>
+      <section class="contact">
+        <div class="container">
+          <div class="contact-header">
+            <h1>Contact Us</h1>
+            <p>We're here to help! Get in touch with our support team.</p>
+          </div>
+
+          <div class="contact-content">
+            <div class="contact-info">
+              <div class="contact-item">
+                <div class="contact-icon">📍</div>
+                <div class="contact-details">
+                  <h3>Address</h3>
+                  <p>123 Gaming Street<br />Sydney, NSW 2000<br />Australia</p>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon">📧</div>
+                <div class="contact-details">
+                  <h3>Email</h3>
+                  <p>support@gamestore.com.au<br />sales@gamestore.com.au</p>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon">📞</div>
+                <div class="contact-details">
+                  <h3>Phone</h3>
+                  <p>+61 2 1234 5678<br />Mon-Fri: 9AM-6PM AEST</p>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon">💬</div>
+                <div class="contact-details">
+                  <h3>Live Chat</h3>
+                  <p>Available 24/7<br />Click the chat icon below</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-form">
+              <h2>Send us a Message</h2>
+              <form id="contact-form">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="contact-name">Full Name *</label>
+                    <input type="text" id="contact-name" name="name" required />
+                  </div>
+                  <div class="form-group">
+                    <label for="contact-email">Email Address *</label>
+                    <input
+                      type="email"
+                      id="contact-email"
+                      name="email"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="contact-subject">Subject *</label>
+                  <select id="contact-subject" name="subject" required>
+                    <option value="">Select a subject</option>
+                    <option value="general">General Inquiry</option>
+                    <option value="support">Technical Support</option>
+                    <option value="billing">Billing Question</option>
+                    <option value="refund">Refund Request</option>
+                    <option value="partnership">Partnership</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="contact-message">Message *</label>
+                  <textarea
+                    id="contact-message"
+                    name="message"
+                    rows="6"
+                    placeholder="Please describe your inquiry in detail..."
+                    required
+                  ></textarea>
+                </div>
+
+                <div class="form-group checkbox-group">
+                  <label class="checkbox-label">
+                    <input
+                      type="checkbox"
+                      id="contact-newsletter"
+                      name="newsletter"
+                    />
+                    <span
+                      >Subscribe to our newsletter for updates and special
+                      offers</span
+                    >
+                  </label>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-large">
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <div class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-grid">
+              <div class="faq-item">
+                <h3>How do I download my purchased games?</h3>
+                <p>
+                  After completing your purchase, you'll receive an email with
+                  download instructions and activation codes. Follow the
+                  provided steps to download and activate your game.
+                </p>
+              </div>
+
+              <div class="faq-item">
+                <h3>What payment methods do you accept?</h3>
+                <p>
+                  We accept all major credit cards (Visa, MasterCard, American
+                  Express), PayPal, and digital wallets like Apple Pay and
+                  Google Pay.
+                </p>
+              </div>
+
+              <div class="faq-item">
+                <h3>Can I get a refund for a digital game?</h3>
+                <p>
+                  Due to the digital nature of our products, refunds are
+                  generally not available once a game is activated. However, we
+                  may make exceptions for technical issues or billing errors.
+                </p>
+              </div>
+
+              <div class="faq-item">
+                <h3>Do you ship physical copies?</h3>
+                <p>
+                  No, we only sell digital games that can be downloaded and
+                  activated immediately after purchase. This allows for instant
+                  delivery and eliminates shipping costs.
+                </p>
+              </div>
+
+              <div class="faq-item">
+                <h3>What if I have technical issues with a game?</h3>
+                <p>
+                  If you experience technical issues, please contact our support
+                  team with details about the problem. We'll help you
+                  troubleshoot or provide a solution.
+                </p>
+              </div>
+
+              <div class="faq-item">
+                <h3>Are your games region-locked?</h3>
+                <p>
+                  Most of our games are region-free, but some may have regional
+                  restrictions. Please check the game details page for specific
+                  information about region compatibility.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <!-- Notification -->
+    <div id="notification" class="notification"></div>
+
+    <script src="js/header-footer.js"></script>
+    <script src="js/contact.js"></script>
+  </body>
+</html>

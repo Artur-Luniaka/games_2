@@ -1,0 +1,242 @@
+[
+  {
+    "id": 1,
+    "gameId": 1,
+    "reviewerName": "Alex Johnson",
+    "rating": 4.5,
+    "review": "Cyberpunk 2077 has come a long way since launch. The game now delivers the immersive experience it promised. The story is compelling and the world is incredibly detailed.",
+    "date": "2024-01-15"
+  },
+  {
+    "id": 2,
+    "gameId": 1,
+    "reviewerName": "Sarah Chen",
+    "rating": 4.0,
+    "review": "Great game with amazing graphics and story. The bugs have been mostly fixed and the gameplay is smooth. Highly recommend for RPG fans.",
+    "date": "2024-01-10"
+  },
+  {
+    "id": 3,
+    "gameId": 2,
+    "reviewerName": "Mike Rodriguez",
+    "rating": 5.0,
+    "review": "Red Dead Redemption 2 is a masterpiece. The attention to detail is incredible, the story is emotional, and the open world is breathtaking. One of the best games ever made.",
+    "date": "2024-01-20"
+  },
+  {
+    "id": 4,
+    "gameId": 2,
+    "reviewerName": "Emma Wilson",
+    "rating": 4.8,
+    "review": "Absolutely stunning game. The graphics, story, and gameplay are all top-notch. Arthur Morgan is one of the most well-written characters in gaming history.",
+    "date": "2024-01-18"
+  },
+  {
+    "id": 5,
+    "gameId": 3,
+    "reviewerName": "David Thompson",
+    "rating": 5.0,
+    "review": "The Witcher 3 is still the gold standard for RPGs. Even years after release, it's still one of the best games available. The DLCs are also excellent.",
+    "date": "2024-01-12"
+  },
+  {
+    "id": 6,
+    "gameId": 3,
+    "reviewerName": "Lisa Park",
+    "rating": 4.9,
+    "review": "Incredible storytelling and world-building. The choices you make actually matter and the characters are memorable. A must-play for any RPG fan.",
+    "date": "2024-01-08"
+  },
+  {
+    "id": 7,
+    "gameId": 4,
+    "reviewerName": "James Brown",
+    "rating": 4.7,
+    "review": "GTA V is still going strong after all these years. The online mode keeps getting better and the single-player story is still entertaining.",
+    "date": "2024-01-22"
+  },
+  {
+    "id": 8,
+    "gameId": 4,
+    "reviewerName": "Rachel Green",
+    "rating": 4.5,
+    "review": "Great open-world game with lots of activities. The story is fun and the online multiplayer is addictive. Worth every penny.",
+    "date": "2024-01-14"
+  },
+  {
+    "id": 9,
+    "gameId": 5,
+    "reviewerName": "Chris Lee",
+    "rating": 5.0,
+    "review": "Elden Ring is FromSoftware's masterpiece. The open world is massive and beautiful, the combat is challenging but fair, and the lore is fascinating.",
+    "date": "2024-01-16"
+  },
+  {
+    "id": 10,
+    "gameId": 5,
+    "reviewerName": "Amanda Foster",
+    "rating": 4.8,
+    "review": "Amazing game that combines the best of Dark Souls with open-world exploration. The boss fights are epic and the world is full of secrets to discover.",
+    "date": "2024-01-19"
+  },
+  {
+    "id": 11,
+    "gameId": 6,
+    "reviewerName": "Tom Anderson",
+    "rating": 4.3,
+    "review": "FIFA 24 is a solid football game with improved graphics and gameplay. The career mode is engaging and Ultimate Team is as addictive as ever.",
+    "date": "2024-01-11"
+  },
+  {
+    "id": 12,
+    "gameId": 6,
+    "reviewerName": "Jessica Martinez",
+    "rating": 4.2,
+    "review": "Good football simulation with realistic gameplay. The new features are nice but it's still very similar to previous versions. Still fun to play.",
+    "date": "2024-01-13"
+  },
+  {
+    "id": 13,
+    "gameId": 7,
+    "reviewerName": "Ryan Taylor",
+    "rating": 4.1,
+    "review": "Modern Warfare III delivers solid multiplayer action. The campaign is short but enjoyable, and the multiplayer modes are well-designed.",
+    "date": "2024-01-17"
+  },
+  {
+    "id": 14,
+    "gameId": 7,
+    "reviewerName": "Nicole White",
+    "rating": 4.0,
+    "review": "Good Call of Duty game with fast-paced action. The graphics are impressive and the multiplayer is fun, though it feels similar to previous entries.",
+    "date": "2024-01-21"
+  },
+  {
+    "id": 15,
+    "gameId": 8,
+    "reviewerName": "Kevin Garcia",
+    "rating": 4.4,
+    "review": "Assassin's Creed Mirage is a return to form for the series. The stealth mechanics are well-implemented and the historical setting is beautifully recreated.",
+    "date": "2024-01-09"
+  },
+  {
+    "id": 16,
+    "gameId": 8,
+    "reviewerName": "Michelle Davis",
+    "rating": 4.3,
+    "review": "Enjoyable stealth game with a rich historical setting. The story is engaging and the parkour mechanics are smooth. Good addition to the AC series.",
+    "date": "2024-01-15"
+  },
+  {
+    "id": 17,
+    "gameId": 9,
+    "reviewerName": "Daniel Clark",
+    "rating": 4.2,
+    "review": "Starfield offers a vast universe to explore with interesting quests and characters. The ship customization is fun and the space exploration is immersive.",
+    "date": "2024-01-20"
+  },
+  {
+    "id": 18,
+    "gameId": 9,
+    "reviewerName": "Sophie Turner",
+    "rating": 4.1,
+    "review": "Good space RPG with lots of content. The exploration is enjoyable and the story has some interesting moments. Some technical issues but overall solid.",
+    "date": "2024-01-18"
+  },
+  {
+    "id": 19,
+    "gameId": 10,
+    "reviewerName": "Robert Lewis",
+    "rating": 4.6,
+    "review": "Forza Horizon 5 is the best racing game I've played. The graphics are stunning, the car selection is amazing, and the open world is beautiful.",
+    "date": "2024-01-12"
+  },
+  {
+    "id": 20,
+    "gameId": 10,
+    "reviewerName": "Ashley Moore",
+    "rating": 4.5,
+    "review": "Excellent racing game with incredible visuals and smooth gameplay. The Mexico setting is gorgeous and there's so much to do. Highly recommended.",
+    "date": "2024-01-16"
+  },
+  {
+    "id": 21,
+    "gameId": 11,
+    "reviewerName": "Brandon Hall",
+    "rating": 4.8,
+    "review": "Minecraft is timeless. The creativity it allows is unmatched and the multiplayer experience is fantastic. Still one of the best games ever made.",
+    "date": "2024-01-14"
+  },
+  {
+    "id": 22,
+    "gameId": 11,
+    "reviewerName": "Hannah King",
+    "rating": 4.9,
+    "review": "Incredible game that lets your imagination run wild. The building mechanics are intuitive and the survival mode adds great challenge. Perfect for all ages.",
+    "date": "2024-01-19"
+  },
+  {
+    "id": 23,
+    "gameId": 12,
+    "reviewerName": "Gregory Scott",
+    "rating": 4.5,
+    "review": "Hogwarts Legacy captures the magic of the Harry Potter universe perfectly. The open world is beautiful and the magic combat system is satisfying.",
+    "date": "2024-01-13"
+  },
+  {
+    "id": 24,
+    "gameId": 12,
+    "reviewerName": "Victoria Adams",
+    "rating": 4.4,
+    "review": "Great game for Harry Potter fans. The world is immersive and the story is engaging. The magic system is fun to use and the graphics are beautiful.",
+    "date": "2024-01-17"
+  },
+  {
+    "id": 25,
+    "gameId": 1,
+    "reviewerName": "Patrick Murphy",
+    "rating": 4.3,
+    "review": "Cyberpunk 2077 has improved significantly since launch. The story is engaging and the world feels alive. The character customization is extensive.",
+    "date": "2024-01-23"
+  },
+  {
+    "id": 26,
+    "gameId": 2,
+    "reviewerName": "Catherine Wright",
+    "rating": 4.9,
+    "review": "Red Dead Redemption 2 is a work of art. The attention to detail is incredible and the story is emotionally powerful. A true masterpiece.",
+    "date": "2024-01-24"
+  },
+  {
+    "id": 27,
+    "gameId": 3,
+    "reviewerName": "Steven Baker",
+    "rating": 4.8,
+    "review": "The Witcher 3 remains one of the best RPGs ever made. The storytelling is exceptional and the world is rich with detail and lore.",
+    "date": "2024-01-25"
+  },
+  {
+    "id": 28,
+    "gameId": 5,
+    "reviewerName": "Laura Evans",
+    "rating": 4.7,
+    "review": "Elden Ring is challenging but incredibly rewarding. The open world is vast and beautiful, and the combat system is deep and satisfying.",
+    "date": "2024-01-26"
+  },
+  {
+    "id": 29,
+    "gameId": 11,
+    "reviewerName": "Mark Johnson",
+    "rating": 4.7,
+    "review": "Minecraft continues to be amazing. The endless possibilities for creativity make it a game you can play forever. The community is also fantastic.",
+    "date": "2024-01-27"
+  },
+  {
+    "id": 30,
+    "gameId": 12,
+    "reviewerName": "Jennifer Smith",
+    "rating": 4.6,
+    "review": "Hogwarts Legacy is a dream come true for Harry Potter fans. The world is magical and the gameplay is engaging. Highly recommended.",
+    "date": "2024-01-28"
+  }
+]

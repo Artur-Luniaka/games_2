@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game Details - GameStore</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="header-placeholder"></div>
+
+    <main>
+      <section class="game-details">
+        <div class="container">
+          <div class="breadcrumb">
+            <a href="index.html">Home</a> / <a href="catalog.html">Catalog</a> /
+            <span id="game-title">Game</span>
+          </div>
+
+          <div class="game-content">
+            <div class="game-media">
+              <div class="game-image">
+                <img id="game-image" src="" alt="Game" />
+              </div>
+              <div class="game-gallery" id="game-gallery">
+                <!-- Additional images will be loaded dynamically -->
+              </div>
+            </div>
+
+            <div class="game-info">
+              <div class="game-header">
+                <h1 id="game-name">Game Title</h1>
+                <div class="game-meta">
+                  <div class="game-rating">
+                    <div class="stars" id="game-stars"></div>
+                    <span id="game-rating-text">0.0</span>
+                  </div>
+                  <div class="game-platforms" id="game-platforms"></div>
+                </div>
+              </div>
+
+              <div class="game-price-section">
+                <div class="game-price">
+                  <span class="price" id="game-price">$0</span>
+                  <span class="original-price" id="game-original-price"></span>
+                </div>
+                <button class="btn btn-primary btn-large" id="add-to-cart-btn">
+                  Add to Cart
+                </button>
+              </div>
+
+              <div class="game-description">
+                <h3>Description</h3>
+                <p id="game-description">
+                  Game description will be loaded here.
+                </p>
+              </div>
+
+              <div class="game-details-grid">
+                <div class="detail-item">
+                  <span class="detail-label">Genre:</span>
+                  <span class="detail-value" id="game-genre"></span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">Release Date:</span>
+                  <span class="detail-value" id="game-release-date"></span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">Developer:</span>
+                  <span class="detail-value" id="game-developer"></span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">Publisher:</span>
+                  <span class="detail-value" id="game-publisher"></span>
+                </div>
+              </div>
+
+              <div class="game-features">
+                <h3>Features</h3>
+                <ul id="game-features">
+                  <!-- Features will be loaded dynamically -->
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Reviews Section -->
+          <div class="game-reviews">
+            <h2>Customer Reviews</h2>
+            <div class="reviews-summary">
+              <div class="overall-rating">
+                <div class="rating-number" id="overall-rating">0.0</div>
+                <div class="stars" id="overall-stars"></div>
+                <div class="total-reviews" id="total-reviews">0 reviews</div>
+              </div>
+            </div>
+            <div class="reviews-list" id="game-reviews-list">
+              <!-- Reviews will be loaded dynamically -->
+            </div>
+          </div>
+
+          <!-- You May Also Like Section -->
+          <div class="recommendations">
+            <h2>You May Also Like</h2>
+            <div class="games-grid" id="recommendations-grid">
+              <!-- Recommended games will be loaded dynamically -->
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <!-- Notification -->
+    <div id="notification" class="notification"></div>
+
+    <script src="js/header-footer.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/game-details.js"></script>
+  </body>
+</html>

@@ -1,0 +1,338 @@
+[
+  {
+    "id": 1,
+    "title": "Cyberpunk 2077",
+    "description": "An open-world action-adventure story set in Night City, a megalopolis obsessed with power, glamour and body modification. You play as V, a mercenary outlaw going after a one-of-a-kind implant that is the key to immortality.",
+    "price": 59.99,
+    "originalPrice": 79.99,
+    "rating": 4.2,
+    "platforms": ["PC", "Xbox"],
+    "genre": "RPG",
+    "releaseDate": "2020-12-10",
+    "developer": "CD Projekt Red",
+    "publisher": "CD Projekt",
+    "image": "assets/cyberpunk-2077.jpg",
+    "gallery": [
+      "assets/cyberpunk-2077-1.jpg",
+      "assets/cyberpunk-2077-2.jpg",
+      "assets/cyberpunk-2077-3.jpg"
+    ],
+    "features": [
+      "Open-world action-adventure RPG",
+      "First-person perspective",
+      "Multiple character classes",
+      "Deep customization system",
+      "Branching storyline",
+      "Next-gen graphics"
+    ],
+    "popular": true
+  },
+  {
+    "id": 2,
+    "title": "Red Dead Redemption 2",
+    "description": "America, 1899. The end of the wild west era has begun. After a robbery goes badly wrong in the western town of Blackwater, Arthur Morgan and the Van der Linde gang are forced to flee.",
+    "price": 49.99,
+    "originalPrice": 59.99,
+    "rating": 4.8,
+    "platforms": ["PC", "Xbox"],
+    "genre": "Action",
+    "releaseDate": "2019-12-05",
+    "developer": "Rockstar Games",
+    "publisher": "Rockstar Games",
+    "image": "assets/red-dead-redemption-2.jpg",
+    "gallery": [
+      "assets/red-dead-2-1.jpg",
+      "assets/red-dead-2-2.jpg",
+      "assets/red-dead-2-3.jpg"
+    ],
+    "features": [
+      "Epic tale of life in America's unforgiving heartland",
+      "Vast and atmospheric world",
+      "Online multiplayer experience",
+      "Stunning visuals and realistic gameplay",
+      "Comprehensive story mode",
+      "Multiple activities and side missions"
+    ],
+    "popular": true
+  },
+  {
+    "id": 3,
+    "title": "The Witcher 3: Wild Hunt",
+    "description": "You are Geralt of Rivia, mercenary monster slayer. Before you stands a war-torn, monster-infested continent you can explore at will. Your current contract? Tracking down Ciri — the Child of Prophecy.",
+    "price": 39.99,
+    "originalPrice": 59.99,
+    "rating": 4.9,
+    "platforms": ["PC", "Xbox"],
+    "genre": "RPG",
+    "releaseDate": "2015-05-19",
+    "developer": "CD Projekt Red",
+    "publisher": "CD Projekt",
+    "image": "assets/witcher-3.jpg",
+    "gallery": [
+      "assets/witcher-3-1.jpg",
+      "assets/witcher-3-2.jpg",
+      "assets/witcher-3-3.jpg"
+    ],
+    "features": [
+      "Open world RPG with meaningful choices",
+      "Monster hunting and combat",
+      "Rich storytelling and characters",
+      "Multiple endings based on choices",
+      "Expansive DLC content",
+      "Next-gen upgrade available"
+    ],
+    "popular": true
+  },
+  {
+    "id": 4,
+    "title": "Grand Theft Auto V",
+    "description": "Los Santos: a sprawling sun-soaked metropolis full of self-help gurus, starlets and fading celebrities, once the envy of the Western world, now struggling to stay afloat in an era of economic uncertainty and cheap reality TV.",
+    "price": 29.99,
+    "originalPrice": 59.99,
+    "rating": 4.7,
+    "platforms": ["PC", "Xbox"],
+    "genre": "Action",
+    "releaseDate": "2013-09-17",
+    "developer": "Rockstar North",
+    "publisher": "Rockstar Games",
+    "image": "assets/gta-v.jpg",
+    "gallery": [
+      "assets/gta-v-1.jpg",
+      "assets/gta-v-2.jpg",
+      "assets/gta-v-3.jpg"
+    ],
+    "features": [
+      "Three playable protagonists",
+      "Open world sandbox gameplay",
+      "Online multiplayer mode",
+      "Extensive customization options",
+      "Multiple storylines",
+      "Regular content updates"
+    ],
+    "popular": true
+  },
+  {
+    "id": 5,
+    "title": "Elden Ring",
+    "description": "Rise, Tarnished, and be guided by grace to brandish the power of the Elden Ring and become an Elden Lord in the Lands Between.",
+    "price": 69.99,
+    "originalPrice": 69.99,
+    "rating": 4.9,
+    "platforms": ["PC", "Xbox"],
+    "genre": "Action",
+    "releaseDate": "2022-02-25",
+    "developer": "FromSoftware",
+    "publisher": "Bandai Namco",
+    "image": "assets/elden-ring.jpg",
+    "gallery": [
+      "assets/elden-ring-1.jpg",
+      "assets/elden-ring-2.jpg",
+      "assets/elden-ring-3.jpg"
+    ],
+    "features": [
+      "Open world action RPG",
+      "Challenging combat system",
+      "Cooperative multiplayer",
+      "Multiple character builds",
+      "Epic boss battles",
+      "Rich lore and storytelling"
+    ],
+    "popular": true
+  },
+  {
+    "id": 6,
+    "title": "FIFA 24",
+    "description": "Experience the beautiful game with FIFA 24. Play as your favorite teams and players in the most realistic football simulation ever created.",
+    "price": 79.99,
+    "originalPrice": 79.99,
+    "rating": 4.3,
+    "platforms": ["PC", "Xbox"],
+    "genre": "Sports",
+    "releaseDate": "2023-09-29",
+    "developer": "EA Sports",
+    "publisher": "Electronic Arts",
+    "image": "assets/fifa-24.jpg",
+    "gallery": [
+      "assets/fifa-24-1.jpg",
+      "assets/fifa-24-2.jpg",
+      "assets/fifa-24-3.jpg"
+    ],
+    "features": [
+      "Realistic football simulation",
+      "Career mode and Ultimate Team",
+      "Licensed teams and players",
+      "Advanced AI and physics",
+      "Online multiplayer",
+      "Regular updates and events"
+    ],
+    "popular": false
+  },
+  {
+    "id": 7,
+    "title": "Call of Duty: Modern Warfare III",
+    "description": "The most advanced Call of Duty ever created. Experience intense, realistic combat across multiple game modes and maps.",
+    "price": 89.99,
+    "originalPrice": 89.99,
+    "rating": 4.1,
+    "platforms": ["PC", "Xbox"],
+    "genre": "FPS",
+    "releaseDate": "2023-11-10",
+    "developer": "Sledgehammer Games",
+    "publisher": "Activision",
+    "image": "assets/cod-mw3.jpg",
+    "gallery": [
+      "assets/cod-mw3-1.jpg",
+      "assets/cod-mw3-2.jpg",
+      "assets/cod-mw3-3.jpg"
+    ],
+    "features": [
+      "Intense multiplayer combat",
+      "Campaign mode",
+      "Zombies mode",
+      "Advanced weapon customization",
+      "Cross-platform play",
+      "Regular content updates"
+    ],
+    "popular": false
+  },
+  {
+    "id": 8,
+    "title": "Assassin's Creed Mirage",
+    "description": "Experience the story of Basim, a cunning street thief with nightmarish visions, seeking answers and justice as he navigates the bustling streets of ninth-century Baghdad.",
+    "price": 59.99,
+    "originalPrice": 59.99,
+    "rating": 4.4,
+    "platforms": ["PC", "Xbox"],
+    "genre": "Action",
+    "releaseDate": "2023-10-05",
+    "developer": "Ubisoft Bordeaux",
+    "publisher": "Ubisoft",
+    "image": "assets/ac-mirage.jpg",
+    "gallery": [
+      "assets/ac-mirage-1.jpg",
+      "assets/ac-mirage-2.jpg",
+      "assets/ac-mirage-3.jpg"
+    ],
+    "features": [
+      "Stealth-focused gameplay",
+      "Historical setting",
+      "Parkour mechanics",
+      "Assassination missions",
+      "Rich narrative",
+      "Beautiful open world"
+    ],
+    "popular": false
+  },
+  {
+    "id": 9,
+    "title": "Starfield",
+    "description": "Starfield is the first new universe in over 25 years from Bethesda Game Studios, the award-winning creators of The Elder Scrolls V: Skyrim and Fallout 4.",
+    "price": 79.99,
+    "originalPrice": 79.99,
+    "rating": 4.2,
+    "platforms": ["PC", "Xbox"],
+    "genre": "RPG",
+    "releaseDate": "2023-09-06",
+    "developer": "Bethesda Game Studios",
+    "publisher": "Bethesda Softworks",
+    "image": "assets/starfield.jpg",
+    "gallery": [
+      "assets/starfield-1.jpg",
+      "assets/starfield-2.jpg",
+      "assets/starfield-3.jpg"
+    ],
+    "features": [
+      "Space exploration RPG",
+      "Multiple planets to explore",
+      "Ship customization",
+      "Character creation",
+      "Companion system",
+      "Mod support"
+    ],
+    "popular": true
+  },
+  {
+    "id": 10,
+    "title": "Forza Horizon 5",
+    "description": "Your Ultimate Horizon Adventure awaits! Explore the vibrant and ever-evolving open world landscapes of Mexico with limitless, fun driving action in hundreds of the world's greatest cars.",
+    "price": 69.99,
+    "originalPrice": 69.99,
+    "rating": 4.6,
+    "platforms": ["PC", "Xbox"],
+    "genre": "Racing",
+    "releaseDate": "2021-11-09",
+    "developer": "Playground Games",
+    "publisher": "Xbox Game Studios",
+    "image": "assets/forza-horizon-5.jpg",
+    "gallery": [
+      "assets/forza-5-1.jpg",
+      "assets/forza-5-2.jpg",
+      "assets/forza-5-3.jpg"
+    ],
+    "features": [
+      "Open world racing",
+      "Hundreds of cars",
+      "Dynamic weather system",
+      "Online multiplayer",
+      "Customization options",
+      "Regular content updates"
+    ],
+    "popular": false
+  },
+  {
+    "id": 11,
+    "title": "Minecraft",
+    "description": "Create, explore and survive! Minecraft is a game about placing blocks and going on adventures. Build anything you can imagine with unlimited resources in Creative mode, or go on grand expeditions in Survival.",
+    "price": 26.95,
+    "originalPrice": 26.95,
+    "rating": 4.8,
+    "platforms": ["PC", "Xbox"],
+    "genre": "Adventure",
+    "releaseDate": "2011-11-18",
+    "developer": "Mojang Studios",
+    "publisher": "Mojang Studios",
+    "image": "assets/minecraft.jpg",
+    "gallery": [
+      "assets/minecraft-1.jpg",
+      "assets/minecraft-2.jpg",
+      "assets/minecraft-3.jpg"
+    ],
+    "features": [
+      "Sandbox building game",
+      "Survival and creative modes",
+      "Multiplayer support",
+      "Regular updates",
+      "Mod support",
+      "Cross-platform play"
+    ],
+    "popular": true
+  },
+  {
+    "id": 12,
+    "title": "Hogwarts Legacy",
+    "description": "Hogwarts Legacy is an immersive, open-world action RPG set in the world first introduced in the Harry Potter books. Now you can take control of the action and be at the center of your own adventure in the wizarding world.",
+    "price": 79.99,
+    "originalPrice": 79.99,
+    "rating": 4.5,
+    "platforms": ["PC", "Xbox"],
+    "genre": "RPG",
+    "releaseDate": "2023-02-10",
+    "developer": "Avalanche Software",
+    "publisher": "Warner Bros. Games",
+    "image": "assets/hogwarts-legacy.jpg",
+    "gallery": [
+      "assets/hogwarts-1.jpg",
+      "assets/hogwarts-2.jpg",
+      "assets/hogwarts-3.jpg"
+    ],
+    "features": [
+      "Open world wizarding adventure",
+      "Magic combat system",
+      "Character customization",
+      "Hogwarts exploration",
+      "Magical creatures",
+      "Rich story campaign"
+    ],
+    "popular": true
+  }
+]

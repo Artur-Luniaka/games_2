@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game Catalog - GameStore</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="header-placeholder"></div>
+
+    <main>
+      <section class="catalog">
+        <div class="container">
+          <div class="catalog-header">
+            <h1>Game Catalog</h1>
+            <p>
+              Discover our extensive collection of premium games for Xbox and PC
+            </p>
+          </div>
+
+          <div class="catalog-content">
+            <!-- Filters Sidebar -->
+            <aside class="filters">
+              <div class="filter-section">
+                <h3>Platform</h3>
+                <div class="filter-options">
+                  <label class="filter-option">
+                    <input type="checkbox" value="xbox" checked />
+                    <span>Xbox</span>
+                  </label>
+                  <label class="filter-option">
+                    <input type="checkbox" value="pc" checked />
+                    <span>PC</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="filter-section">
+                <h3>Genre</h3>
+                <div class="filter-options" id="genre-filters">
+                  <!-- Genres will be loaded dynamically -->
+                </div>
+              </div>
+
+              <div class="filter-section">
+                <h3>Price Range</h3>
+                <div class="price-range">
+                  <input
+                    type="range"
+                    id="price-min"
+                    min="0"
+                    max="100"
+                    value="0"
+                  />
+                  <input
+                    type="range"
+                    id="price-max"
+                    min="0"
+                    max="100"
+                    value="100"
+                  />
+                  <div class="price-labels">
+                    <span id="price-min-label">$0</span>
+                    <span id="price-max-label">$100</span>
+                  </div>
+                </div>
+              </div>
+
+              <button class="btn btn-secondary" id="clear-filters">
+                Clear Filters
+              </button>
+            </aside>
+
+            <!-- Games Grid -->
+            <div class="games-section">
+              <div class="games-header">
+                <div class="results-info">
+                  <span id="results-count">0 games found</span>
+                </div>
+                <div class="sort-controls">
+                  <label for="sort-select">Sort by:</label>
+                  <select id="sort-select">
+                    <option value="name">Name</option>
+                    <option value="price-low">Price: Low to High</option>
+                    <option value="price-high">Price: High to Low</option>
+                    <option value="rating">Rating</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="games-grid" id="catalog-games-grid">
+                <!-- Games will be loaded dynamically -->
+              </div>
+
+              <div class="no-results" id="no-results" style="display: none">
+                <h3>No games found</h3>
+                <p>Try adjusting your filters to find more games.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <!-- Notification -->
+    <div id="notification" class="notification"></div>
+
+    <script src="js/header-footer.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/catalog.js"></script>
+  </body>
+</html>

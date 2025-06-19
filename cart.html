@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart - GameStore</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="header-placeholder"></div>
+
+    <main>
+      <section class="cart">
+        <div class="container">
+          <div class="cart-header">
+            <h1>Shopping Cart</h1>
+          </div>
+
+          <div class="cart-content">
+            <!-- Cart Items -->
+            <div class="cart-items" id="cart-items">
+              <!-- Cart items will be loaded dynamically -->
+            </div>
+
+            <!-- Empty Cart Message -->
+            <div class="empty-cart" id="empty-cart" style="display: none">
+              <div class="empty-cart-content">
+                <div class="empty-cart-icon">🛒</div>
+                <h2>Your cart is empty</h2>
+                <p>Looks like you haven't added any games to your cart yet.</p>
+                <a href="catalog.html" class="btn btn-primary">Browse Games</a>
+              </div>
+            </div>
+
+            <!-- Cart Summary -->
+            <div class="cart-summary" id="cart-summary" style="display: none">
+              <div class="summary-header">
+                <h3>Order Summary</h3>
+              </div>
+              <div class="summary-items">
+                <div class="summary-item">
+                  <span>Subtotal:</span>
+                  <span id="subtotal">$0.00</span>
+                </div>
+                <div class="summary-item">
+                  <span>Tax:</span>
+                  <span id="tax">$0.00</span>
+                </div>
+                <div class="summary-item total">
+                  <span>Total:</span>
+                  <span id="total">$0.00</span>
+                </div>
+              </div>
+              <div class="summary-actions">
+                <button class="btn btn-primary btn-large" id="checkout-btn">
+                  Proceed to Checkout
+                </button>
+                <a href="catalog.html" class="btn btn-secondary">
+                  Continue Shopping
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <!-- Notification -->
+    <div id="notification" class="notification"></div>
+
+    <script src="js/header-footer.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/cart-page.js"></script>
+  </body>
+</html>
