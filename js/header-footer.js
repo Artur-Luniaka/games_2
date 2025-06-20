@@ -18,7 +18,7 @@ class HeaderFooter {
             <header>
                 <div class="container">
                     <div class="header-content">
-                        <a href="./" class="logo">MobilePlayStrike 🎮</a>
+                        <a href="./" class="logo"><img src="./assets/logo-icon.png" alt="logo" width="50" height="50"></a>
                         
                         <nav>
                             <ul class="nav-menu" id="nav-menu">
@@ -32,7 +32,7 @@ class HeaderFooter {
 
                         <div class="header-actions">
                             <a href="cart.html" class="cart-icon" id="cart-icon">
-                                🛒
+                                <img src="assets/shopping-cart.png" alt="Shopping Cart" width="30" height="30">
                                 <span class="cart-count" id="cart-count">0</span>
                             </a>
                             <button class="mobile-menu-toggle" id="mobile-menu-toggle">
@@ -57,12 +57,7 @@ class HeaderFooter {
                 <div class="container">
                     <div class="footer-content">
                         <div class="footer-section">
-                            <h3>MobilePlayStrike 🎮</h3>
-                            <p>Your premier destination for digital video games. We offer the best prices and instant delivery for Xbox and PC games.</p>
-                        </div>
-                        
-                        <div class="footer-section">
-                            <h3>Support</h3>
+                            <h3>MobilePlayStrike Support</h3>
                             <ul>
                                 <li><a href="privacy.html">Privacy Policy</a></li>
                                 <li><a href="terms.html">Terms of Service</a></li>

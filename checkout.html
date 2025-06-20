@@ -138,13 +138,31 @@
             class="success-message"
             style="display: none"
           >
-            <div class="success-content">
-              <div class="success-icon">✓</div>
+            <div class="success-card">
+              <div class="success-icon-wrapper">
+                <svg
+                  class="success-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 52 52"
+                >
+                  <circle
+                    class="success-icon-circle"
+                    cx="26"
+                    cy="26"
+                    r="25"
+                    fill="none"
+                  />
+                  <path
+                    class="success-icon-checkmark"
+                    fill="none"
+                    d="M14.1 27.2l7.1 7.2 16.7-16.8"
+                  />
+                </svg>
+              </div>
               <h2>Thank You for Your Order!</h2>
               <p>We have received your request and will contact you shortly.</p>
               <p class="redirect-text">
-                You will be redirected to the home page in
-                <span id="countdown">10</span> seconds
+                You will be automatically redirected to the main page shortly.
               </p>
               <button
                 class="btn btn-primary"

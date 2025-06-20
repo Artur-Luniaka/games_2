@@ -164,21 +164,10 @@ class CheckoutPage {
       successMessage.style.display = "flex";
     }
 
-    // Start countdown
-    let countdown = 10;
-    const countdownElement = document.getElementById("countdown");
-
-    const timer = setInterval(() => {
-      countdown--;
-      if (countdownElement) {
-        countdownElement.textContent = countdown;
-      }
-
-      if (countdown <= 0) {
-        clearInterval(timer);
-        window.location.href = "./";
-      }
-    }, 1000);
+    // Redirect to home page after 10 seconds
+    setTimeout(() => {
+      window.location.href = "./";
+    }, 10000);
   }
 
   // Функция для показа уведомлений

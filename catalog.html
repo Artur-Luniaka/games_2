@@ -32,54 +32,75 @@
           <div class="catalog-content">
             <!-- Filters Sidebar -->
             <aside class="filters">
-              <div class="filter-section">
-                <h3>Platform</h3>
-                <div class="filter-options">
-                  <label class="filter-option">
-                    <input type="checkbox" value="xbox" checked />
-                    <span>Xbox</span>
-                  </label>
-                  <label class="filter-option">
-                    <input type="checkbox" value="pc" checked />
-                    <span>PC</span>
-                  </label>
-                </div>
+              <div class="filters-header">
+                <h3>Filters</h3>
+                <button
+                  class="filters-toggle"
+                  id="filters-toggle"
+                  aria-label="Toggle filters"
+                >
+                  <svg
+                    class="toggle-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </button>
               </div>
 
-              <div class="filter-section">
-                <h3>Genre</h3>
-                <div class="filter-options" id="genre-filters">
-                  <!-- Genres will be loaded dynamically -->
-                </div>
-              </div>
-
-              <div class="filter-section">
-                <h3>Price Range</h3>
-                <div class="price-range">
-                  <input
-                    type="range"
-                    id="price-min"
-                    min="0"
-                    max="100"
-                    value="0"
-                  />
-                  <input
-                    type="range"
-                    id="price-max"
-                    min="0"
-                    max="100"
-                    value="100"
-                  />
-                  <div class="price-labels">
-                    <span id="price-min-label">$0</span>
-                    <span id="price-max-label">$100</span>
+              <div class="filters-content" id="filters-content">
+                <div class="filter-section">
+                  <h3>Platform</h3>
+                  <div class="filter-options">
+                    <label class="filter-option">
+                      <input type="checkbox" value="xbox" checked />
+                      <span>Xbox</span>
+                    </label>
+                    <label class="filter-option">
+                      <input type="checkbox" value="pc" checked />
+                      <span>PC</span>
+                    </label>
                   </div>
                 </div>
-              </div>
 
-              <button class="btn btn-secondary" id="clear-filters">
-                Clear Filters
-              </button>
+                <div class="filter-section">
+                  <h3>Genre</h3>
+                  <div class="filter-options" id="genre-filters">
+                    <!-- Genres will be loaded dynamically -->
+                  </div>
+                </div>
+
+                <div class="filter-section">
+                  <h3>Price Range</h3>
+                  <div class="price-range">
+                    <input
+                      type="range"
+                      id="price-min"
+                      min="0"
+                      max="100"
+                      value="0"
+                    />
+                    <input
+                      type="range"
+                      id="price-max"
+                      min="0"
+                      max="100"
+                      value="100"
+                    />
+                    <div class="price-labels">
+                      <span id="price-min-label">$0</span>
+                      <span id="price-max-label">$100</span>
+                    </div>
+                  </div>
+                </div>
+
+                <button class="btn btn-secondary" id="clear-filters">
+                  Clear Filters
+                </button>
+              </div>
             </aside>
 
             <!-- Games Grid -->

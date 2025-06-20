@@ -38,6 +38,7 @@ class CatalogPage {
     this.setupGenreFilters();
     this.setupPriceFilters();
     this.setupClearFilters();
+    this.setupFiltersToggle();
   }
 
   setupPlatformFilters() {
@@ -129,6 +130,17 @@ class CatalogPage {
         this.clearFilters();
       });
     }
+  }
+
+  setupFiltersToggle() {
+    const filtersToggle = document.getElementById("filters-toggle");
+    const filtersContainer = document.querySelector(".filters");
+
+    if (!filtersToggle || !filtersContainer) return;
+
+    filtersToggle.addEventListener("click", () => {
+      filtersContainer.classList.toggle("collapsed");
+    });
   }
 
   setupSorting() {
